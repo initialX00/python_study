@@ -1,0 +1,42 @@
+점프 투 python으로 독학가능.
+https://wikidocs.net/book/1
+
+
+파이썬의 컴파일러( JDK같은거 )는 파이썬이다
+파이썬 컴파일러( 최소사양 )
+아나콘다( 여러라이브러리 포함 )
+
+프로젝트 생성 시 기본은 type: virtualenv, 아나콘다는 type: conda
+파이썬에는 두가지 경로가 있다. 일반디렉토리와 __init__파일이 있다면 pacage취급.
+
+plugin - indent rainbow 설치 (파이썬은 괄호를 잘 안 쓰고 들여쓰기로 구분하기에 들여쓰기를 시각화한다)
+
+
+
+파이썬은 많은 함수를 아는것과 프로젝트 세팅이 중요하다.
+파이썬은 비슷한 기능의 여러 함수를 쓰지 않고, 하나의 함수로 함수 내부에 세팅값을 설정한다.
+
+
+ㅇ튜플 자료형
+리스트와 같지만 소괄호로 나타낸다. 불변이다.
+불변이기에 사용할 수 있는 함수가 제한적이다. list로 감싸서 list로서 사용할 수 있다.
+
+
+파이썬은 오버로딩이 되지 않기때문에 비슷하게 구현할려면 기본값을 줘야한다.
+
+파이썬은 생성자에 new를 쓰지 않는다.
+
+크롤링 (웹 정보 끌어오기)
+하단의 인터페이스에 python pakages에서 selenium 설치, webdriver-manager 설치
+
+
+셀레니움 기본 세팅
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from time import sleep
+
+def run():
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install())) 
+    driver.get("https://comic.naver.com/webtoon?tab=mon")
+    sleep(5) 
